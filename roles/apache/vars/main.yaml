@@ -1,0 +1,14 @@
+#Apache Related variables:
+apache_package_name: apache2
+apache_service_name: apache2
+apache_document_root: /var/www/html
+
+document_root: /var/www/html/devopsdoor-master
+http_host: devopsdoor.com
+http_conf: devopsdoor.conf
+http_port: 80
+disable_default: true
+
+unzip_module_name: unzip
+flagfile: /var/www/html/devopsdoor-master/index.html
+code_repo_url: https://github.com/basil1987/devopsdoor/archive/refs/heads/master.zip

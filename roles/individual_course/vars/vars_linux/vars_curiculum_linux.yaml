@@ -1,0 +1,26 @@
+CURRICULUM:    
+ - name: Pre-Requisites - All Major prerequisites for this training
+   sections: 
+     - name: Linux Administration
+       topics:
+        - Package managers in Linux
+        - Introduction to Web Applications
+        - Apache and Apache modules
+        - PHP Web Application frameworks
+        - Application Servers and Tomcat
+        - Java Web application frameworks
+        - Database Servers - MySQL
+        - A sample Web application that run in Linux environment.       
+     - name: Networking Concepts
+       topics:
+        - Networking basics
+        - Internet and ISPs
+        - NAT gateways, Routers and Switches
+        - DNS
+        - Hosting your first website and running your webapplication       
+     - name: Linux Basics
+       topics:
+        - Basic Linux Commands
+        - User management in Linux
+        - Permissions
+        - Troubleshooting and Log management

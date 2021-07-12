@@ -1,0 +1,76 @@
+menu:
+  - Home
+  - FAQ
+  - Page
+  - Contact
+  - Courses
+
+welcome_block_content:
+  header: Welcome To DevOps Engineer page Designed by Abhay
+  description: We are a group of people working in different organisations, with 10+ years of Industrial experience. We provide online, offline and Corporate training on DevOps to groom eligible engineers who can deliver the IT projects as your Industry>
+
+welcome_block_list:
+  expert:
+    title: The Experts
+    desc: Our Trainers are experts in DevOps and we believe experience goes a long way
+    image_path: images/icon_1.png
+  Marketing:
+    title: Zero Marketing
+    desc: We dont have a marketing team. You call us and ask for Trainer Phone number. Talk to him directly
+    image_path: images/icon_2.png
+  Ownership:
+    title: Individual Ownership
+    image_path: images/icon_3.png
+    desc: Your trainer is your primary point of contact. He take care of all your questions
+  stories:
+    title: Hundreds of successful stories
+    image_path: images/icon_4.png
+    desc: Our trainers have trained over 1000 IT professionals and we assist them in all the way we could.
+
+
+upcoming_batches_header: Upcoming Batches
+upcoming_batches_desc: Below are the upcoming batches we are starting
+
+upcoming_batches:
+  batch1:
+    date: 17
+    month: Jun
+    title: CI/CD Pipeline - Git, Github, Ant, Maven, Jenkins
+    date_month: 17/06/2019 - One month
+    address: Marathahalli, Bangalore / Online
+  batch2:
+    date: 17
+    month: Jun
+    title: DevOps and AWS Complete Training
+    date_month: 17/06/2019 - 2.5 months
+    address: Marathahalli, Bangalore / Online
+  batch3:
+    date: 01
+    month: Jul
+    title: Configuration Management - Ansible and Nagios
+    date_month: 01/07/2019 - One month
+    address: Marathahalli, Bangalore / Online
+  batch4:
+    date: 01
+    month: Jul
+    title: DevOps and AWS Complete Training testing
+    date_month: 01/07/2019 - 2.5 months
+    address: Marathahalli, Bangalore / Online test
+  batch5:
+    date: 15
+    month: Jul
+    title: Containerisarion - Docker and Kubernetes
+    date_month: 15/07/2019 - One month
+    address: learning source
+  batch6:
+    date: 18
+    month: may
+    title: project
+    date_month: test month
+    address: test data
+
+header:
+  - Have any questions?
+  - +(91) 8249858181
+  - abhayranjan@gmail.com
+  - Training Portal Login

@@ -1,0 +1,87 @@
+CURRICULUM:
+  - name: Scripting Training - Bash and Python Scripting !
+    sections: 
+      - name: Shell Scripting
+        topics:
+          - Linux Shell
+          - Introduction to Bash
+          - Introduction to Linux process
+          - Positional Parameters
+          - Conditional statements
+          - Loops in Bash
+          - Function
+          - GetOps
+          - Case statement
+          - Linux Administration using shell scripting
+          - Real time scripts for different system administration activities
+      - name: Python Programming
+        topics: 
+          - Why Python?
+          - Introduction to Object oriented programming
+          - Interactive programming concepts - Data Types
+          - Dictionary, List and Tuples
+          - Loop, Function, conditional s/tatements
+          - Python modules and real time use - Creating module in python
+          - Practical scripts and real time examples       
+  - name: Containers and orchestration Training - Docker and Kubernetes
+    sections:
+      - name: Docker
+        topics:
+          - Introduction to Virtualization
+          - Introduction to Containerization
+          - Containerization Vs Virtualization
+          - Docker Container
+          - Docker Images
+          - PHP Application Deployment using Docker.   
+          - Life cycles of a container
+          - Introduction to Microservices
+          - Docker cluster - Swarm
+          - Services and Stack
+          - Docker-compose
+          - Build your container infrastructure
+          - Containerizing your existing Application
+          - Docker Networking
+          - Best Security Practices
+          - Docker images as your artifacts
+          - Release process using Dockers
+          - Integration with Jenkins
+      - name: Kubernetes
+        topics:
+          - Containerization and Clusters
+          - Kubernetes Architecture
+          - Setting up Clusters
+          - Deploying containerized applications.
+          - Modules
+          - Scaling up Applications
+          - Change Management
+          - Kubernetes API Server
+          - Master and Node components in Kubernetes
+          - apiserver, etcd, scheduler, controller managers and cloud controller managers
+          - Kubelet and Container runtime
+          - Addons
+          - Final Project
+  - name: Pre-Requisites - All Major prerequisites for this training
+    sections: 
+      - name: Linux Administration
+        topics:
+          - Package managers in Linux
+          - Introduction to Web Applications
+          - Apache and Apache modules
+          - PHP Web Application frameworks
+          - Application Servers and Tomcat
+          - Java Web application frameworks
+          - Database Servers - MySQL
+          - A sample Web application that run in Linux environment.       
+      - name: Networking Concepts
+        topics:
+          - Networking basics
+          - Internet and ISPs
+          - NAT gateways, Routers and Switches
+          - DNS
+          - Hosting your first website and running your webapplication       
+      - name: Linux Basics
+        topics:
+          - Basic Linux Commands
+          - User management in Linux
+          - Permissions
+          - Troubleshooting and Log management

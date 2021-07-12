@@ -1,0 +1,47 @@
+- hosts: wordpressweb
+  remote_user: azureuser
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+   - name:  apache must be installed
+     apt: 
+       name: apache2
+       state: latest
+       update_cache: yes
+
+   - name: php must be installed
+     apt:
+       name: libapache2-mod-php
+       state: latest
+       update_cache: yes
+   - name: mysql mod must be installed
+     apt:
+       name: php-mysql
+       state: latest
+       update_cache: yes
+   - name: apache must be running
+     service:
+       enabled: yes
+       name: apache2
+       state: started
+   - name: apache must be restarted
+     service:
+       enabled: yes
+       name: apache2
+       state: restarted  
+   - name: make sure that there is no index.html
+     file:
+       path: /var/www/html/index.html
+       state: absent
+   - name: download wordpress files and excract them to /var/www/html
+     unarchive:
+       dest: /var/www/html
+       src: https://wordpress.org/latest.tar.gz
+       remote_src: yes
+   - name: copy wp-config.php file with correct credentials to /var/www/html 
+     copy:
+       dest: /var/www/html/wordpress/wp-config.php
+       src: /home/ansible/.ansible/wp-config.php
+

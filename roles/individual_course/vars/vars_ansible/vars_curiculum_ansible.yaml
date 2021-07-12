@@ -1,0 +1,99 @@
+CURRICULUM:
+ - name: Scripting Training - Bash and Python Scripting !
+   sections: 
+     - name: Shell Scripting
+       topics:
+        - Linux Shell
+        - Introduction to Bash
+        - Introduction to Linux process
+        - Positional Parameters
+        - Conditional statements
+        - Loops in Bash
+        - Function
+        - GetOps
+        - Case statement
+        - Linux Administration using shell scripting
+        - Real time scripts for different system administration activities
+     - name: Python Programming
+       topics: 
+        - Why Python?
+        - Introduction to Object oriented programming
+        - Interactive programming concepts - Data Types
+        - Dictionary, List and Tuples
+        - Loop, Function, conditional s/tatements
+        - Python modules and real time use - Creating module in python
+        - Practical scripts and real time examples       
+ - name: Pre-Requisites - All Major prerequisites for this training
+   sections: 
+     - name: Linux Administration
+       topics:
+        - Package managers in Linux
+        - Introduction to Web Applications
+        - Apache and Apache modules
+        - PHP Web Application frameworks
+        - Application Servers and Tomcat
+        - Java Web application frameworks
+        - Database Servers - MySQL
+        - A sample Web application that run in Linux environment.       
+     - name: Networking Concepts
+       topics:
+        - Networking basics
+        - Internet and ISPs
+        - NAT gateways, Routers and Switches
+        - DNS
+        - Hosting your first website and running your webapplication       
+     - name: Linux Basics
+       topics:
+        - Basic Linux Commands
+        - User management in Linux
+        - Permissions
+        - Troubleshooting and Log management       
+ - name: Configuration Management Training - Ansible and Nagios
+   sections:
+     - name: Chef
+       topics:
+        - Introduction to Chef
+        - Comparison with Ansible
+        - Configuration management project - How it can be done on Chef    
+     - name: Ansible
+       topics:
+        - Introduction to Configuration Management
+        - Ansible and SSH
+        - Ansible architecture
+        - Advantages over Other tools
+        - Ansible command line
+        - Playbooks in Ansible - demo
+        - Security
+        - Introduction to YAML
+        - Ansible inventory
+        - Ansible Modules
+        - Advanced Playbook usage
+        - Ansible Roles
+        - Roles and your production infrastructure
+        - Ansible Galaxy, Demo
+        - Config Release using Ansible, Git etc
+        - Autoscaling using Ansible
+        - Integration with Cloud/AWS
+        - Final Project      
+     - name: Puppet
+       topics:
+        - Introduction
+        - Comparison with Ansible
+        - Configuration management project - How it can be done on Puppet.      
+     - name: Nagios   
+       topics:
+        - Monitoring - Why its important?
+        - Nagios and Your real time infrastructure
+        - Hosts and Hostgroups
+        - Service and Service groups
+        - Host and Service templates
+        - Contacts and Contact groups
+        - Time periods and definitions
+        - Commands and definitions
+        - Nagios Plugins
+        - Writing a Nagios plugin
+        - Sample Nagios plugins to monitor your infrastructure.
+        - Nagios in real time
+        - Grouping your machines for monitoring. Best practices
+        - Automating your Nagios management.
+        - Integrating with other tools such as Jenkins, Ansible etc. 

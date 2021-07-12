@@ -1,0 +1,4 @@
+- name: copy contact.html page to /var/www/html/
+  template:
+    dest: /var/www/html/devopsdoor-master/contact.html
+    src: contact.html.j2

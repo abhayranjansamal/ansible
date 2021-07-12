@@ -1,0 +1,4 @@
+- name: copy course_home.html.j2 page to /var/www/html/devopsdoor-master
+  template:
+    dest: /var/www/html/devopsdoor-master/course_home.html
+    src: course_home.html.j2

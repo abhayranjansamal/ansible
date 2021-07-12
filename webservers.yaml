@@ -1,0 +1,34 @@
+
+- hosts: webservers
+  remote_user: ansible
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+   - name:  apache must be installed
+     apt: 
+       name: apache2
+       state: latest
+       update_cache: yes
+
+   - name: php must be installed
+     apt:
+       name: libapache2-mod-php
+       state: latest
+       update_cache: yes
+   - name: mysql mod must be installed
+     apt:
+       name: php-mysql
+       state: latest
+       update_cache: yes
+   - name: /opt/var/index.html be present in /var/www/html
+     copy:
+       dest: /var/www/html/
+       src: /opt/var/index.html
+   -  name: apache must be running
+      service:
+       enabled: yes
+       name: apache2
+       state: started
+  

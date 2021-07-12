@@ -1,0 +1,75 @@
+## Apache Section starts ##
+#
+#
+#Install Apache package on web server
+- name: Ensure apache is installed
+  apt:
+    name: "{{ apache_package_name }}"
+    state: latest
+    update_cache: yes
+
+#Makes sure Apache service is running
+
+- name: Ensure apache service is running
+  service:
+    enabled: yes
+    name: "{{ apache_service_name }}"
+    state: started
+
+# Setup new site in apache.conf
+
+- name: Set up Apache virtualHost
+  template:
+    src: apache.conf.j2
+    dest: "/etc/apache2/sites-available/{{ http_conf }}"
+
+#Enable new site defined in apache.conf
+
+- name: Enable new site
+  shell: /usr/sbin/a2ensite "{{ http_conf }}"
+  args:
+    removes: "{{ apache_document_root }}/index.html"
+  notify: Reload apache
+
+# Disable Default site in Apache
+
+- name: Disable default Apache site
+  shell: /usr/sbin/a2dissite 000-default.conf
+  when: disable_default
+  args:
+    removes: "{{ apache_document_root }}/index.html"
+  notify: Reload apache
+
+# Enable rewrite module on apache
+
+- name: Enable rewrite module
+  apache2_module:
+    name: rewrite
+    state: present
+    ignore_configcheck: True
+
+# Apache configuration section Ends ##
+#Delete default index.html file from apache document root
+
+- name: Ensure there is no index.html in Document root folder
+  file:
+    path: "{{ apache_document_root }}/index.html"
+    state: absent
+
+# Installs unzip module on Ubuntu; Not present by default
+
+- name: Ensure unzip is installed to unzip code from github
+  apt:
+    name: "{{ unzip_module_name }}"
+    state: latest
+    update_cache: yes
+
+
+#Copy code from repository to web servers apache document root.
+
+- name: Unarchive the zip file downloaded from github
+  unarchive:
+    src: "{{ code_repo_url }}"
+    dest: "{{ apache_document_root }}"
+    remote_src: yes
+    creates: "{{ flagfile }}"

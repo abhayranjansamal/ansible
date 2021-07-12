@@ -1,0 +1,43 @@
+- hosts: wordpressdb
+  remote_user: azureuser
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+   - name: mysql must be installed
+     apt:
+       name: mysql-server
+       update_cache: yes
+       state: latest
+   - name: make sure mysql service is running and also enabled at boot
+     service:
+       name: mysql
+       enabled: yes
+       state: started
+   - name: make sure that pymysql is installed
+     apt:
+       name:
+#        - python-pymysql 
+         - python3-pymysql
+       update_cache: yes
+       state: latest
+   - name: make sure that database wpdb is present
+     mysql_db:
+       name: wpdb
+       state: present
+       login_unix_socket: /var/run/mysqld/mysqld.sock
+   - name: make sure that database user wpuser must be exists and he has permission to the wpdb database  
+     mysql_user:
+       name: wpdb
+       password: DEVOPS12345
+       priv: wpdb.*:ALL
+#      host_all: yes
+       login_unix_socket: /var/run/mysqld/mysqld.sock
+   - name: make sure that database user wpuser must be exists and he has permission to the wpdb database
+     mysql_user:
+       name: wpdb
+       password: DEVOPS12345
+       priv: wpdb.*:ALL
+       host_all: yes
+       login_unix_socket: /var/run/mysqld/mysqld.sock

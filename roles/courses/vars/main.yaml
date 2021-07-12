@@ -1,0 +1,62 @@
+Header_contents:
+  query_text: questions?
+  ph: 9999999999
+  email_id: mail@gmail.com
+  login: Training  Login
+  site_heading: DevOps & AWS
+
+menu_bar:
+  opt_1: Home
+  opt_2: FAQ
+  opt_3: Page
+  opt_4: Contact Us
+  opt_5: Courses
+
+heading: DevOps Training Courses
+
+sub_heading: Devops and AWS
+
+list of courses:
+  - DevOps and AWS Complete Training:
+      instructor: Mr Basil Varghese
+      intro: intro
+      information: More Info
+      course_type: pay
+  - Configuration Management Ansible and Nagios:
+      instructor: Mr Basil Varghese
+      intro: intro
+      information: More Info
+      course_type: paid
+  - Build and Release through automated CI/CD pipeline:  
+      instructor: Mr Basil Varghese
+      intro: intro
+      information: More Info
+      course_type: paid
+  - Containerisation - Docker and Kubernetes:
+      instructor: Mr Basil Varghese
+      intro: intro 
+      information: More Info
+      course_type: paid
+  - AWS Project Training with Ansible automation:
+      instructor: Mr Basil Varghese
+      intro: intro 
+      information: More Info
+      course_type: paid
+  - Linux And Networking Training:
+      instructor: prof.
+      intro: Linux
+      information: More Info
+      course_type: you have to pay 
+
+footer: 
+  - fheading: DevOps Door
+  - caption: Reach us on social Media.
+  - contact:
+      footer_email_id: basil1987@gmail.com
+      footer_phone: 8197408582
+      location: Marathahalli, Bangalore
+  - Home
+  - FAQ
+  - Page
+  - Contact
+  - Courses

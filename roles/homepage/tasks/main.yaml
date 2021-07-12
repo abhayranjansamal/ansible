@@ -1,0 +1,4 @@
+- name: dynamic menu content for home page
+  template:
+    src: index.html.j2
+    dest: /var/www/html/devopsdoor-master/index.html

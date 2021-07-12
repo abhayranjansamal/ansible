@@ -1,0 +1,144 @@
+
+#Header Variables:
+Header_footer_title: DevOps Door
+contact_number: +91 9876543210
+contact_email: sendyourquestions@gmail.com
+contact_address: Marathahalli, Bangalore
+#Apache Related variables:
+apache_package_name: apache2
+apache_service_name: apache2
+apache_document_root: /var/www/html
+
+document_root: /var/www/html/devopsdoor-master
+http_host: devopsdoor.com
+http_conf: devopsdoor.conf
+http_port: 80
+disable_default: true
+
+unzip_module_name: unzip
+flagfile: /var/www/html/devopsdoor-master/index.html
+code_repo_url: https://github.com/basil1987/devopsdoor/archive/refs/heads/master.zip
+
+#FAQ Variables and Lists
+faq_title: Frequently Asked Questions
+
+FAQ:
+  - question: I have a very little experience (or a Fresher) in IT. Is this course suitable for me ?
+    answer: Yes, You need to complete the prerequisites training, a 2 weeks free program. You are eligible to start with this Training once you completed the prerequisites. If you are a fresher to IT, please take our 90 hours full DevOps and AWS program.
+  - question: Is the trainer reachable offline, whenever I need help ?
+    answer: Yes. The offline support will be available during the day time, preferrably in the first half. You will have unconrolled access to the trainer along with his phone numbers and email IDs.
+  - question: Do you provide course materials ?
+    answer: Once you enrolled to the training, you will get unlimitted long term access to a training portal where you will find all course maretials such as Presentations, Course Assignments, Project description, Trainer notes and Major tutorials etc. You will continue to get access to this portal even after the course completion. This allows you to complete the assigned projects with help of trainer. There is a chat option available in the portal too, to communicate with trainer and other students.
+  - question: Do you provide job assistance ?
+    answer: As of now, the job assistance is purely based on performance. Our trainers have more than 10 years of experience and they get lots of enquiries from colligues/companies. We assist the students purely based on performance which inlcude status of their attendance, project and assignment completions etc. So far, all our students who successfully completed all projects already found their way in their career.
+  - question: Does the trainer help preparing for interviews and resumes ?
+    answer: Yes, trainer will assist you at end of the training with your resume preparation and interview patterns
+  - question: What are the prerequisites for this training ?
+    answer: A basic understanding about softwares and practices, knowledge into Networking concepts and Linux Administration are the mandatory prerequisites. Good knowledge in scripting (preferrably Python and Bash) and automation is highly recommended too. If you are unsure about these prerequisites, please consider taking our 90 hours full devops and aws program.
+  - question: Do you offer any project to understand the real time scenarios ?
+    answer: This course come along with a free project prepared by your trainer (who will have atleast 10 years of work experience) completely based on work scenarios. It means you get a chance to work on loads of real time scenarios.
+
+#Navigation Bar Variables:
+nav_bar:
+  - name: Home
+    value: index
+  - name: FAQ
+    value: #
+  - name:  Page
+    value: #
+  - name: Contact
+    value: contact
+  - name: Courses
+    value: course_home
+
+course_container:
+ - name: Teacher
+   info: Basil Varghese
+ - name: Categories
+   info: Cloud Computing
+
+#Review Variables
+review_title: Course Reviews
+review_rating: '4.8'
+review_count: (79 Ratings)
+review_bars:
+  - star: 5 star
+    number: '95'
+  - star: 4 star
+    number: '20'
+  - star: 3 star
+    number: '10'
+  - star: 2 star
+    number: '0'
+  - star: 1 star
+    number: '0'
+
+#Comments
+comment_1_name: Sandeep R
+comment_1_text: Absolutely Brilliant Training by Basil. I recommend DevOps Door to anyone who is looking for DevOps and AWS Training.
+comment_2_image: images/comment_2.jpg
+comment_2_name: Rony
+comment_2_text: agree. He is amazing.
+comment_new: Love our courses? Write a review and help others
+
+#Course Requirement
+course_requirement:
+  - name: Basic Linux Administrator Skills.
+  - name: You have 1+ years of experience into IT and software applications.
+  - name: You have completed the pre-requisites training conducted by Basil Varghese.
+
+#who can do this course
+course_whocando:
+  - name: System Admins/Engineers, who wish to go for DevOps as a Career.
+  - name: Cloud Engineers, who wish to upskill on this config management tool to automate their tasks.
+  - name: Anyone who wish to upskill to automate without coding.
+
+#who should do this course
+who_should_do_title: Who should learn this course?
+who_should_do_ans: If you are from an operational background and want to find best industrial practices to manage configurations of a software infrastructure. This is great for Linux/Windows Administrators who want to move their role as a DevOps engineer and explore the new approaches IT follows in Configuration Management.
+
+#Course Features:
+course_features:
+  - class: fa fa-clock-o
+    feature: 'Duration:'
+    info: 1 Month
+    
+  - class: fa fa-file-text-o
+    feature: 'Lectures:'
+    info: 26 Lectures
+    
+  - class: fa fa-question-circle-o
+    feature: 'Hours:'
+    info: 45 Hours
+
+
+#Teacher details
+Teachers_title: Teacher
+Teachers_image: images/basil_small.png
+Teachers_name: Basil Varghese
+Teachers_position: CTO of RavelGrid LLP
+Teachers_details: Basil Varghese is an IT expert with 10+ years of IT experience and 5 years of Training experience in DevOps and Cloud. He is the CTO and Co-Founder of RavelGrid Technologies LLP, which is a startup that provide private cloud and DevOps solutions to its partner network. Before Starting his own venture, Basil worked as a Senior Liaison in Akamai Technologies, one of the biggest internet company. In his 10+ years of career, he worked for many startups and big companies and have an excellent technical and soft skills
+
+#Teacher Rating
+Teacher_rating:
+  - feature: 'Average Rating:'
+    info: '4.9'
+    class: fa fa-star
+  - feature: 'Review:'
+    info: '140'
+    class: fa fa-comment
+  - feature: 'Quizzes:'
+    info: '600'
+    class: fa fa-user
+
+#Footer 
+news_letter_image: images/newsletter.jpg
+news_letter_title: sign up for latest news and offers
+news_letter_subtitle: Subcribe to get notification about latest courses we are launching
+news_letter_input: Enter Your Email
+news_letter_button: Subscribe
+
+footer_image: images/footer_background.png
+playstore_image: images/mobile_1.png
+appstore_image: images/mobile_2.png
+copyright_message: All rights reserved | This template is made with html and javascript.

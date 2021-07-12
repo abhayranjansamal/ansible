@@ -1,0 +1,162 @@
+#Delete default index.html file from apache document root
+
+- name: Ensure there is no index.html in Document root folder
+  file:
+    path: "{{ apache_document_root }}/index.html"
+    state: absent
+
+# Installs unzip module on Ubuntu; Not present by default
+
+- name: Ensure unzip is installed to unzip code from github
+  apt:
+    name: "{{ unzip_module_name }}"
+    state: latest
+    update_cache: yes
+
+
+#Copy code from repository to web servers apache document root.
+
+- name: Unarchive the zip file downloaded from github
+  unarchive:
+    src: "{{ code_repo_url }}"
+    dest: "{{ apache_document_root }}"
+    remote_src: yes
+    creates: "{{ flagfile }}"
+
+## Unarchive Module Ends ##
+#
+#
+## ansible Template Section Starts ##
+
+
+- name: Include vars for aws template
+  include_vars:
+    dir: vars/vars_aws
+    extensions:
+      - 'yaml'
+
+- name: Copy Template aws.html.j2 to /var/www/html/devopsdoor-master
+  template:
+    dest: "{{ apache_document_root }}/devopsdoor-master/aws.html"
+    src: aws.html.j2
+  notify: Restart apache
+
+- name: Copy new aws image to /var/www/html/devopsdoor-master/images
+  copy: 
+      dest: "{{ apache_document_root }}/devopsdoor-master/images"
+      src: aws.png
+
+## AWS Template Section Ends ##
+#
+#
+## ansible Template Section Starts ##
+
+
+- name: Include vars for ansible template
+  include_vars:
+    dir: vars/vars_ansible
+    extensions:
+      - 'yaml'
+
+- name: Copy Template ansible.html.j2 to /var/www/html/devopsdoor-master
+  template:
+    dest: "{{ apache_document_root }}/devopsdoor-master/ansible.html"
+    src: ansible.html.j2
+  notify: Restart apache
+
+- name: Copy new ansible image to /var/www/html/devopsdoor-master/images
+  copy:
+      dest: "{{ apache_document_root }}/devopsdoor-master/images"
+      src: ansible.jpg
+
+## Ansible Template Section Ends ##
+#
+#
+## DevOps AWS Template Section Starts ##
+
+
+- name: Include vars for devopsaws template
+  include_vars:
+    dir: vars/vars_devopsaws
+    extensions:
+      - 'yaml'
+
+- name: Copy Template devopsaws.html.j2 to /var/www/html/devopsdoor-master
+  template:
+    dest: "{{ apache_document_root }}/devopsdoor-master/devopsaws.html"
+    src: devopsaws.html.j2
+  notify: Restart apache
+
+- name: Copy new devops aws image to /var/www/html/devopsdoor-master/images
+  copy: 
+      dest: "{{ apache_document_root }}/devopsdoor-master/images"
+      src: devopsaws.jpg
+
+## DevOps AWS Template Section Ends ##
+#
+#
+## Docker Template Section Starts ##
+
+
+- name: Include vars for docker template
+  include_vars:
+    dir: vars/vars_docker
+    extensions:
+      - 'yaml'
+
+- name: Copy Template docker.html.j2 to /var/www/html/devopsdoor-master
+  template:
+    dest: "{{ apache_document_root }}/devopsdoor-master/docker.html"
+    src: docker.html.j2
+  notify: Restart apache
+
+- name: Copy new docker image to /var/www/html/devopsdoor-master/images
+  copy:
+      dest: "{{ apache_document_root }}/devopsdoor-master/images"
+      src: docker.jpg
+
+## Docker Template Section Ends ##
+#
+#
+## linux Template Section Starts ##
+
+- name: Include vars for linux template
+  include_vars:
+    dir: vars/vars_linux
+    extensions:
+      - 'yaml'
+
+- name: Copy Template linux.html.j2 to /var/www/html/devopsdoor-master
+  template:
+    dest: "{{ apache_document_root }}/devopsdoor-master/linux.html"
+    src: linux.html.j2
+  notify: Restart apache
+
+- name: Copy new linux image to /var/www/html/devopsdoor-master/images
+  copy:
+      dest: "{{ apache_document_root }}/devopsdoor-master/images"
+      src: linux.jpg
+
+## Linux Template Section Ends ##
+#
+#
+## Jenkins Template Section Starts ##
+
+- name: Include vars for jenkins template
+  include_vars:
+    dir: vars/vars_jenkins
+    extensions:
+      - 'yaml'
+
+- name: Copy Template jenkins.html.j2 to /var/www/html/devopsdoor-master
+  template:
+    dest: "{{ apache_document_root }}/devopsdoor-master/jenkins.html"
+    src: jenkins.html.j2
+  notify: Restart apache
+
+- name: Copy new jenkins image to /var/www/html/devopsdoor-master/images
+  copy:
+      dest: "{{ apache_document_root }}/devopsdoor-master/images"
+      src: jenkins.jpg
+
+## Jenkins Template Section Ends ##
